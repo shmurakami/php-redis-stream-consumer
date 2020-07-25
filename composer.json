@@ -1,0 +1,10 @@
+{
+    "name": "shmurakami/chatwork-mention-webhook-consumer",
+    "authors": [
+        {
+            "name": "shaka",
+            "email": "shmurakami1104@gmail.com"
+        }
+    ],
+    "require": {}
+}
