@@ -1,4 +1,4 @@
-FROM php:7.3.12-cli-stretch
+FROM php:7.4.9-cli-buster
 
 RUN apt-get update && apt-get install vim -y && \
     apt-get install openssl -y && \
