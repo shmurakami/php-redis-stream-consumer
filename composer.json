@@ -6,7 +6,15 @@
             "email": "shmurakami1104@gmail.com"
         }
     ],
+    "require": {
+        "vlucas/phpdotenv": "^5.1"
+    },
     "require-dev": {
         "swoole/ide-helper": "~4.4.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "shmurakami\\ChatworkMentionWebhook\\": "src/"
+        }
     }
 }
