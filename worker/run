@@ -1,0 +1,2 @@
+src=$1
+docker run --rm -v $(pwd):/app -w /app --net redis-sample --link redis-server swoole-php:4.5.2 $src
