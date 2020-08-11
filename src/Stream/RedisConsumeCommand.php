@@ -22,19 +22,21 @@ class RedisConsumeCommand implements ConsumeCommand
     /**
      * @var int
      */
-    private int $count = 10;
+    private int $count;
     /**
      * @var int
      */
-    private int $pollingMilliseconds = 60000;
+    private int $pollingMilliseconds;
 
-    public function __construct(string $group, string $consumer, array $streams)
+    public function __construct(string $group, string $consumer, array $streams, int $count = 10, int $pollingMilliseconds = 60 * 1000)
     {
         $this->group = $group;
         $this->consumer = $consumer;
         $this->streams = $streams;
 
         // override property with config
+        $this->count = $count;
+        $this->pollingMilliseconds = $pollingMilliseconds;
     }
 
     public function execute(Redis $redis)
